@@ -1,0 +1,25 @@
+group 'evolution'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'evolution.Application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.+'
+    compile group: 'net.trystan', name: 'ascii-panel', version: '1.2-SNAPSHOT'
+}
+
+jar {
+    baseName = 'evolution'
+    version = '0.1.0'
+}
